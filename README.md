@@ -7,8 +7,10 @@ Execute these steps in the terminal:
 3. sudo systemctl start docker
 4. sudo usermod -a -G docker $USER
 5. newgrp docker
-6. cd ~/catkin_ws/src/ros1_ci/
-
+6. cd ~/catkin_ws/src
+7. git clone https://github.com/Combuster54/ros1_ci
+8. cd ros1_ci
+   
 Verify if you can use the docker environment:
 
 ```console
