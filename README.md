@@ -82,13 +82,7 @@ Now, you have to wait for a while until the job executes all the steps.
 
 # How to push changes into the repository
 
-First, you must set the SSH key to have write permissions to the remote repository.
-
-```console
-user:~/catkin_ws/src/ros1_ci$ export GIT_SSH_COMMAND='ssh -i ssh/id_ed25519'
-```
-
-Now, you can change something in the code. For example, you can use something like this:
+Now, you can change something in the code. For example:
 
 ```console
 user:~/catkin_ws/src/ros1_ci$ echo "jenkins" > file_to_test.txt
