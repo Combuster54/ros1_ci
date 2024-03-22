@@ -27,9 +27,6 @@ user:~/ros1_ws/src/ros1_ci$ docker ps
 You should see something like that in the snippet below. Copy the administrator password.
 
 ```console
-*************************************************************
-*************************************************************
-*************************************************************
 
 Jenkins initial setup is required. An admin user has been created and a password generated.
 Please use the following password to proceed to installation:
@@ -38,9 +35,6 @@ Please use the following password to proceed to installation:
 
 This may also be found at: /home/user/webpage_ws/jenkins/secrets/initialAdminPassword
 
-*************************************************************
-*************************************************************
-*************************************************************
 ```
 
 Run the following to get the Jenkins URL. Copy the URL and enter it in the web browser. You should have access to the Jenkins web interface.
@@ -48,7 +42,7 @@ Run the following to get the Jenkins URL. Copy the URL and enter it in the web b
 ```console
 user:~/catkin_ws/src/ros1_ci$ cat /home/user/jenkins__pid__url.txt
 To stop Jenkins, run:
-kill 182094
+kill 18369
 
 Jenkins URL:
 https://i-0545XXXXXXe62aed77.robotigniteacademy.com/6058586a-72e1-XXXX-b154-f19eb8321c97/jenkins/
