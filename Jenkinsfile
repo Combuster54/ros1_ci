@@ -26,7 +26,8 @@ pipeline {
         }
         stage('TEST') {
             steps {
-                sh 'docker run --rm ros1_ci:latest "rostest tortoisebot_waypoints waypoints_test.test"'
+                //sh 'docker run --rm ros1_ci:latest "rostest tortoisebot_waypoints waypoints_test.test"'
+                sh 'docker run --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ros1_ci:latest rostest tortoisebot_waypoints waypoints_test.test'
             }
         }
     }
