@@ -19,7 +19,7 @@ sudo apt-get install -y openjdk-17-jre
 cd ~
 JENKINS_FILE="/home/user/jenkins.war"
 if [ ! -f "$JENKINS_FILE" ]; then
-    wget https://updates.jenkins.io/download/war/2.375.1/jenkins.war
+    wget https://updates.jenkins.io/download/war/2.390/jenkins.war
 fi
 
 # Jenkins is about to run, but we must check if 
