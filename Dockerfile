@@ -12,6 +12,8 @@ RUN git clone --recursive https://github.com/rigbetellabs/tortoisebot.git -b noe
 
 COPY tortoisebot_waypoints/tortoisebot_waypoints /noetic_ws/src/tortoisebot_waypoints
 COPY tortoisebot_waypoints/tortoisebot_waypoints_interface /noetic_ws/src/tortoisebot_waypoints_interface
+COPY tortoisebot_gazebo /noetic_ws/src/tortoisebot_gazebo
+COPY tortoisebot_description/ /noetic_ws/src/tortoisebot_description
 
 ADD ros_entrypoint.sh /
 
@@ -26,5 +28,6 @@ RUN echo "source /noetic_ws/devel/setup.bash" >> ~/.bashrc
 
 RUN rm -f /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python
 
-ENTRYPOINT ["bash", "/ros_entrypoint.sh"]
+#ENTRYPOINT ["bash", "/ros_entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "source /noetic_ws/devel/setup.bash && roslaunch tortoisebot_gazebo tortoisebot_playground.launch"]
 CMD ["bash"]
