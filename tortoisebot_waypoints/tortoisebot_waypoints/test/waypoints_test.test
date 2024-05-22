@@ -1,6 +1,6 @@
 <launch>
   <!-- launch gazebo in headless version -->
-  <!-- <include file="$(find tortoisebot_gazebo)/launch/tortoisebot_empty_world.launch" /> -->
+  <include file="$(find tortoisebot_gazebo)/launch/tortoisebot_empty_world.launch" />
 
   <arg name="x_pos" default="0.0"/>
 	<arg name="y_pos" default="0.0"/>
