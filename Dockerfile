@@ -26,6 +26,6 @@ RUN echo "source /noetic_ws/devel/setup.bash" >> ~/.bashrc
 
 RUN rm -f /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python
 
-#ENTRYPOINT ["bash", "/ros_entrypoint.sh"]
-ENTRYPOINT ["/bin/bash", "-c", "source /noetic_ws/devel/setup.bash && roslaunch tortoisebot_gazebo tortoisebot_playground.launch"]
+ENTRYPOINT ["bash", "/ros_entrypoint.sh"]
+#ENTRYPOINT ["/bin/bash", "-c", "source /noetic_ws/devel/setup.bash && roslaunch tortoisebot_gazebo tortoisebot_playground.launch"]
 CMD ["bash"]
